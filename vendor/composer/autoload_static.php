@@ -28,6 +28,14 @@ class ComposerStaticInit721d174a76650a5ba9f0153227c519c6
         'b6ec61354e97f32c0ae683041c78392a' => __DIR__ . '/..' . '/scrivo/highlight.php/HighlightUtilities/functions.php',
         'ed962a97bd972bc82007176b647d4e36' => __DIR__ . '/..' . '/facade/ignition/src/helpers.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
+        'cf97c57bfe0f23854afd2f3818abb7a0' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/functions/create_uploaded_file.php',
+        '9bf37a3d0dad93e29cb4e1b1bfab04e9' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/functions/marshal_headers_from_sapi.php',
+        'ce70dccb4bcc2efc6e94d2ee526e6972' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/functions/marshal_method_from_sapi.php',
+        'f86420df471f14d568bfcb71e271b523' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/functions/marshal_protocol_version_from_sapi.php',
+        'b87481e008a3700344428ae089e7f9e5' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/functions/marshal_uri_from_sapi.php',
+        '0b0974a5566a1077e4f2e111341112c1' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/functions/normalize_server.php',
+        '1ca3bc274755662169f9629d5412a1da' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/functions/normalize_uploaded_files.php',
+        '40360c0b9b437e69bcbb7f1349ce029e' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/functions/parse_cookie_header.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -39,6 +47,10 @@ class ComposerStaticInit721d174a76650a5ba9f0153227c519c6
         'p' => 
         array (
             'phpDocumentor\\Reflection\\' => 25,
+        ),
+        'Z' => 
+        array (
+            'Zend\\Diactoros\\' => 15,
         ),
         'X' => 
         array (
@@ -77,6 +89,7 @@ class ComposerStaticInit721d174a76650a5ba9f0153227c519c6
             'Symfony\\Component\\ErrorHandler\\' => 31,
             'Symfony\\Component\\CssSelector\\' => 30,
             'Symfony\\Component\\Console\\' => 26,
+            'Symfony\\Bridge\\PsrHttpMessage\\' => 30,
         ),
         'R' => 
         array (
@@ -174,6 +187,10 @@ class ComposerStaticInit721d174a76650a5ba9f0153227c519c6
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
             1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
             2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
+        ),
+        'Zend\\Diactoros\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zendframework/zend-diactoros/src',
         ),
         'XdgBaseDir\\' => 
         array (
@@ -279,6 +296,10 @@ class ComposerStaticInit721d174a76650a5ba9f0153227c519c6
         array (
             0 => __DIR__ . '/..' . '/symfony/console',
         ),
+        'Symfony\\Bridge\\PsrHttpMessage\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/psr-http-message-bridge',
+        ),
         'Ramsey\\Uuid\\' => 
         array (
             0 => __DIR__ . '/..' . '/ramsey/uuid/src',
@@ -297,7 +318,8 @@ class ComposerStaticInit721d174a76650a5ba9f0153227c519c6
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'Psr\\EventDispatcher\\' => 
         array (
@@ -3464,11 +3486,17 @@ class ComposerStaticInit721d174a76650a5ba9f0153227c519c6
         'Psr\\EventDispatcher\\ListenerProviderInterface' => __DIR__ . '/..' . '/psr/event-dispatcher/src/ListenerProviderInterface.php',
         'Psr\\EventDispatcher\\StoppableEventInterface' => __DIR__ . '/..' . '/psr/event-dispatcher/src/StoppableEventInterface.php',
         'Psr\\Http\\Message\\MessageInterface' => __DIR__ . '/..' . '/psr/http-message/src/MessageInterface.php',
+        'Psr\\Http\\Message\\RequestFactoryInterface' => __DIR__ . '/..' . '/psr/http-factory/src/RequestFactoryInterface.php',
         'Psr\\Http\\Message\\RequestInterface' => __DIR__ . '/..' . '/psr/http-message/src/RequestInterface.php',
+        'Psr\\Http\\Message\\ResponseFactoryInterface' => __DIR__ . '/..' . '/psr/http-factory/src/ResponseFactoryInterface.php',
         'Psr\\Http\\Message\\ResponseInterface' => __DIR__ . '/..' . '/psr/http-message/src/ResponseInterface.php',
+        'Psr\\Http\\Message\\ServerRequestFactoryInterface' => __DIR__ . '/..' . '/psr/http-factory/src/ServerRequestFactoryInterface.php',
         'Psr\\Http\\Message\\ServerRequestInterface' => __DIR__ . '/..' . '/psr/http-message/src/ServerRequestInterface.php',
+        'Psr\\Http\\Message\\StreamFactoryInterface' => __DIR__ . '/..' . '/psr/http-factory/src/StreamFactoryInterface.php',
         'Psr\\Http\\Message\\StreamInterface' => __DIR__ . '/..' . '/psr/http-message/src/StreamInterface.php',
+        'Psr\\Http\\Message\\UploadedFileFactoryInterface' => __DIR__ . '/..' . '/psr/http-factory/src/UploadedFileFactoryInterface.php',
         'Psr\\Http\\Message\\UploadedFileInterface' => __DIR__ . '/..' . '/psr/http-message/src/UploadedFileInterface.php',
+        'Psr\\Http\\Message\\UriFactoryInterface' => __DIR__ . '/..' . '/psr/http-factory/src/UriFactoryInterface.php',
         'Psr\\Http\\Message\\UriInterface' => __DIR__ . '/..' . '/psr/http-message/src/UriInterface.php',
         'Psr\\Log\\AbstractLogger' => __DIR__ . '/..' . '/psr/log/Psr/Log/AbstractLogger.php',
         'Psr\\Log\\InvalidArgumentException' => __DIR__ . '/..' . '/psr/log/Psr/Log/InvalidArgumentException.php',
@@ -3778,6 +3806,11 @@ class ComposerStaticInit721d174a76650a5ba9f0153227c519c6
         'SebastianBergmann\\Type\\UnknownType' => __DIR__ . '/..' . '/sebastian/type/src/UnknownType.php',
         'SebastianBergmann\\Type\\VoidType' => __DIR__ . '/..' . '/sebastian/type/src/VoidType.php',
         'SebastianBergmann\\Version' => __DIR__ . '/..' . '/sebastian/version/src/Version.php',
+        'Symfony\\Bridge\\PsrHttpMessage\\Factory\\HttpFoundationFactory' => __DIR__ . '/..' . '/symfony/psr-http-message-bridge/Factory/HttpFoundationFactory.php',
+        'Symfony\\Bridge\\PsrHttpMessage\\Factory\\PsrHttpFactory' => __DIR__ . '/..' . '/symfony/psr-http-message-bridge/Factory/PsrHttpFactory.php',
+        'Symfony\\Bridge\\PsrHttpMessage\\Factory\\UploadedFile' => __DIR__ . '/..' . '/symfony/psr-http-message-bridge/Factory/UploadedFile.php',
+        'Symfony\\Bridge\\PsrHttpMessage\\HttpFoundationFactoryInterface' => __DIR__ . '/..' . '/symfony/psr-http-message-bridge/HttpFoundationFactoryInterface.php',
+        'Symfony\\Bridge\\PsrHttpMessage\\HttpMessageFactoryInterface' => __DIR__ . '/..' . '/symfony/psr-http-message-bridge/HttpMessageFactoryInterface.php',
         'Symfony\\Component\\Console\\Application' => __DIR__ . '/..' . '/symfony/console/Application.php',
         'Symfony\\Component\\Console\\CommandLoader\\CommandLoaderInterface' => __DIR__ . '/..' . '/symfony/console/CommandLoader/CommandLoaderInterface.php',
         'Symfony\\Component\\Console\\CommandLoader\\ContainerCommandLoader' => __DIR__ . '/..' . '/symfony/console/CommandLoader/ContainerCommandLoader.php',
@@ -4491,6 +4524,49 @@ class ComposerStaticInit721d174a76650a5ba9f0153227c519c6
         'Whoops\\Util\\SystemFacade' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/SystemFacade.php',
         'Whoops\\Util\\TemplateHelper' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/TemplateHelper.php',
         'XdgBaseDir\\Xdg' => __DIR__ . '/..' . '/dnoegel/php-xdg-base-dir/src/Xdg.php',
+        'Zend\\Diactoros\\AbstractSerializer' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/AbstractSerializer.php',
+        'Zend\\Diactoros\\CallbackStream' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/CallbackStream.php',
+        'Zend\\Diactoros\\Exception\\DeserializationException' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/Exception/DeserializationException.php',
+        'Zend\\Diactoros\\Exception\\ExceptionInterface' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/Exception/ExceptionInterface.php',
+        'Zend\\Diactoros\\Exception\\InvalidArgumentException' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/Exception/InvalidArgumentException.php',
+        'Zend\\Diactoros\\Exception\\InvalidStreamPointerPositionException' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/Exception/InvalidStreamPointerPositionException.php',
+        'Zend\\Diactoros\\Exception\\SerializationException' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/Exception/SerializationException.php',
+        'Zend\\Diactoros\\Exception\\UnreadableStreamException' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/Exception/UnreadableStreamException.php',
+        'Zend\\Diactoros\\Exception\\UnrecognizedProtocolVersionException' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/Exception/UnrecognizedProtocolVersionException.php',
+        'Zend\\Diactoros\\Exception\\UnrewindableStreamException' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/Exception/UnrewindableStreamException.php',
+        'Zend\\Diactoros\\Exception\\UnseekableStreamException' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/Exception/UnseekableStreamException.php',
+        'Zend\\Diactoros\\Exception\\UntellableStreamException' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/Exception/UntellableStreamException.php',
+        'Zend\\Diactoros\\Exception\\UnwritableStreamException' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/Exception/UnwritableStreamException.php',
+        'Zend\\Diactoros\\Exception\\UploadedFileAlreadyMovedException' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/Exception/UploadedFileAlreadyMovedException.php',
+        'Zend\\Diactoros\\Exception\\UploadedFileErrorException' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/Exception/UploadedFileErrorException.php',
+        'Zend\\Diactoros\\HeaderSecurity' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/HeaderSecurity.php',
+        'Zend\\Diactoros\\MessageTrait' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/MessageTrait.php',
+        'Zend\\Diactoros\\PhpInputStream' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/PhpInputStream.php',
+        'Zend\\Diactoros\\RelativeStream' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/RelativeStream.php',
+        'Zend\\Diactoros\\Request' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/Request.php',
+        'Zend\\Diactoros\\RequestFactory' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/RequestFactory.php',
+        'Zend\\Diactoros\\RequestTrait' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/RequestTrait.php',
+        'Zend\\Diactoros\\Request\\ArraySerializer' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/Request/ArraySerializer.php',
+        'Zend\\Diactoros\\Request\\Serializer' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/Request/Serializer.php',
+        'Zend\\Diactoros\\Response' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/Response.php',
+        'Zend\\Diactoros\\ResponseFactory' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/ResponseFactory.php',
+        'Zend\\Diactoros\\Response\\ArraySerializer' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/Response/ArraySerializer.php',
+        'Zend\\Diactoros\\Response\\EmptyResponse' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/Response/EmptyResponse.php',
+        'Zend\\Diactoros\\Response\\HtmlResponse' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/Response/HtmlResponse.php',
+        'Zend\\Diactoros\\Response\\InjectContentTypeTrait' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/Response/InjectContentTypeTrait.php',
+        'Zend\\Diactoros\\Response\\JsonResponse' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/Response/JsonResponse.php',
+        'Zend\\Diactoros\\Response\\RedirectResponse' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/Response/RedirectResponse.php',
+        'Zend\\Diactoros\\Response\\Serializer' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/Response/Serializer.php',
+        'Zend\\Diactoros\\Response\\TextResponse' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/Response/TextResponse.php',
+        'Zend\\Diactoros\\Response\\XmlResponse' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/Response/XmlResponse.php',
+        'Zend\\Diactoros\\ServerRequest' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/ServerRequest.php',
+        'Zend\\Diactoros\\ServerRequestFactory' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/ServerRequestFactory.php',
+        'Zend\\Diactoros\\Stream' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/Stream.php',
+        'Zend\\Diactoros\\StreamFactory' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/StreamFactory.php',
+        'Zend\\Diactoros\\UploadedFile' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/UploadedFile.php',
+        'Zend\\Diactoros\\UploadedFileFactory' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/UploadedFileFactory.php',
+        'Zend\\Diactoros\\Uri' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/Uri.php',
+        'Zend\\Diactoros\\UriFactory' => __DIR__ . '/..' . '/zendframework/zend-diactoros/src/UriFactory.php',
         'phpDocumentor\\Reflection\\DocBlock' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlock.php',
         'phpDocumentor\\Reflection\\DocBlockFactory' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlockFactory.php',
         'phpDocumentor\\Reflection\\DocBlockFactoryInterface' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlockFactoryInterface.php',

@@ -15,7 +15,7 @@ class DataResource extends JsonResource
     public function toArray($request)
     {
         return [
-            'text' => $this['date'] . ' , ' . $this['confirmed'] . ' Persons Confirmed & ' . $this['deaths'] . ' Persons Death & ' . $this['recovered'] . ' Persons Recovered',
+            'text' => $this['cases'],
         ];
     }
 }
