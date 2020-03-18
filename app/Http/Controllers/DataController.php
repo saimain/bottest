@@ -2,96 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use App\Data;
-use App\Http\Resources\DataCollection;
-use App\Http\Resources\DataResource;
+use App\Http\Resources\OverviewResource;
+use Illuminate\Http\Request;
 
 class DataController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
 
+    public function overview()
+    {
         $client = new \GuzzleHttp\Client();
-        $response = $client->request('GET', 'https://corona.lmao.ninja/countries');
-        $values = \GuzzleHttp\json_decode($response->getBody(), true);
-        // return $values;
+        $response = $client->request('GET', 'https://covid19.mathdro.id/api');
 
-        $data =  [
-            $values[0],
-            $values[1],
-            $values[2],
-        ];
-        return DataCollection::collection($data);
-    }
+        // return $response->getBody();
+        $array = json_decode($response->getBody()->getContents(), true); //
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Data  $data
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Data $data)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Data  $data
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Data $data)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Data  $data
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Data $data)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Data  $data
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Data $data)
-    {
-        //
+        return new OverviewResource($array);
     }
 }
