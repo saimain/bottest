@@ -20,7 +20,13 @@ class DataController extends Controller
         $response = $client->request('GET', 'https://corona.lmao.ninja/countries');
         $values = \GuzzleHttp\json_decode($response->getBody(), true);
         // return $values;
-        return DataCollection::collection($values);
+
+        $data =  [
+            $values[0],
+            $values[1],
+            $values[2],
+        ];
+        return DataCollection::collection($data);
     }
 
     /**
