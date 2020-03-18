@@ -20,7 +20,8 @@ class DataController extends Controller
     {
         // $data = Data::all();
         $data = Http::get('https://pomber.github.io/covid19/timeseries.json')['Thailand'];
-        return DataResource::collection($data);
+        // return DataResource::collection($data);
+        return end($data);
     }
 
     /**
