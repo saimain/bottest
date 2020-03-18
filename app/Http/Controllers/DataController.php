@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Data;
+use GuzzleHttp\Client;
+use Illuminate\Http\Request;
 use App\Http\Resources\DataResource;
 use App\Http\Resources\DataResourec;
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 
 class DataController extends Controller
 {
@@ -16,7 +18,8 @@ class DataController extends Controller
      */
     public function index()
     {
-        $data = Data::all();
+        // $data = Data::all();
+        $data = Http::get('https://pomber.github.io/covid19/timeseries.json')['Thailand'];
         return DataResource::collection($data);
     }
 
