@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Data;
+use App\Http\Resources\DataCollection;
 use App\Http\Resources\DataResource;
 
 class DataController extends Controller
@@ -16,10 +17,10 @@ class DataController extends Controller
     {
 
         $client = new \GuzzleHttp\Client();
-        $response = $client->request('GET', 'https://corona.lmao.ninja/all');
+        $response = $client->request('GET', 'https://corona.lmao.ninja/countries');
         $values = \GuzzleHttp\json_decode($response->getBody(), true);
         // return $values;
-        return new DataResource($values);
+        return DataCollection::collection($values);
     }
 
     /**
