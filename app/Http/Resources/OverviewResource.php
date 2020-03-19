@@ -15,9 +15,7 @@ class OverviewResource extends JsonResource
     public function toArray($request)
     {
         return ['messages' => [
-            ['text' => 'Total Confirmed Cases ' . $this['confirmed']['value']],
-            ['text' => 'Total Deaths Cases ' . $this['deaths']['value']],
-            ['text' =>  'Total Recovered Persons ' .  $this['recovered']['value']],
+            ['text' => 'Total Confirmed Cases ' . $this['confirmed']['value'] . ' | Total Deaths Cases ' . $this['deaths']['value'] . ' | Total Recovered Persons ' .  $this['recovered']['value']],
             ['attachment' => [
                 'type' => 'image',
                 'payload' => [
