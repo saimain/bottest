@@ -14,17 +14,31 @@ class CouCollection extends JsonResource
      */
     public function toArray($request)
     {
-        return [
+
+
+        $frame =  array(
             'attachment' => [
                 'type' => 'template',
                 'payload' => [
                     'template_type' => 'generic',
                     'image_aspect_ratio' => 'square',
-                    'elements' => [
-                        ['title' => $this['country']]
-                    ]
+                    'elements' => array(),
                 ]
             ],
-        ];
+        );
+
+        // $data =  $frame['attachment']['payload']['elements'][];
+        // $temp = array_keys($data);
+        foreach ($this as $i) {
+            $frame['attachment']['payload']['elements'][] = $i;
+            // $temp[0] = $i;
+        }
+
+        // return gettype($frame['attachment']['payload']['elements']);
+        // return gettype(json_encode($frame['attachment']['payload']['elements']));
+        $data = json_encode($frame['attachment']['payload']['elements']);
+        return $frame;
+        // return $frame;
+        // print_r($frame);
     }
 }

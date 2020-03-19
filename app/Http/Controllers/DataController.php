@@ -40,6 +40,6 @@ class DataController extends Controller
 
         $array = json_decode($response->getBody()->getContents(), true); //
 
-        return CouCollection::collection($array);
+        return new CouCollection($array);
     }
 }
