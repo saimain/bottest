@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Resources\CountryResource;
+use App\Http\Resources\NotFoundResource;
 use Illuminate\Http\Request;
 
 class CountryData extends Controller
@@ -15,7 +16,12 @@ class CountryData extends Controller
             $array = json_decode($response->getBody()->getContents(), true); //
             return new CountryResource($array);
         } catch (\Throwable $th) {
-            return 'error';
+            // return $th;
+            // 
+            $error =  [
+                ['text' => 'Data not found'],
+            ];
+            return new NotFoundResource($error);
         }
 
         // $array = json_decode($response->getBody()->getContents(), true); //
