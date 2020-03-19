@@ -16,8 +16,7 @@ class TodayOverviewResource extends JsonResource
     public function toArray($request)
     {
         return ['messages' => [
-            ['text' => 'Report Date ' . $this['reportDateString'] .  ' | China ' . $this['mainlandChina'] .  ' | Other Location ' . $this['otherLocations'] . ' | Total Confirmed ' . $this['totalConfirmed'] . ' | Total Recovered ' . $this['totalRecovered']],
-
+            ['text' => $this['reportDateString'] . ' နေ့တွင် ' . 'တရုတ်နိုင်ငံ ' . $this['mainlandChina'] . ' ဦး ကူးစက်ခံရပြီး ၊ အခြားသောနိုင်ငံများတွင် ' . $this['otherLocations'] . ' ဦး ကူးစက်ခံရပါသည်။ ' . 'စုစုပေါင်း ကူးစက်ခံရသူ '  . $this['totalConfirmed'] . ' ဦး ရှိပြီး ၊ ပြန်လည်ကောင်းမွန်လာသူ ' . $this['totalRecovered'] . ' ဦး ရှိပါသည်။'],
         ]];
     }
 }
