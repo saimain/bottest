@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\CouCollection;
 use App\Http\Resources\OverviewResource;
 use App\Http\Resources\TodayOverviewResource;
 use Illuminate\Http\Request;
@@ -30,5 +31,15 @@ class DataController extends Controller
         $array = json_decode($response->getBody()->getContents(), true); //
 
         return new TodayOverviewResource(end($array));
+    }
+
+    public function cou()
+    {
+        $client = new \GuzzleHttp\Client();
+        $response = $client->request('GET', 'https://corona.lmao.ninja/countries');
+
+        $array = json_decode($response->getBody()->getContents(), true); //
+
+        return CouCollection::collection($array);
     }
 }
