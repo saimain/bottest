@@ -17,7 +17,13 @@ class OverviewResource extends JsonResource
         return ['messages' => [
             ['text' => 'Total Confirmed Cases ' . $this['confirmed']['value']],
             ['text' => 'Total Deaths Cases ' . $this['deaths']['value']],
-            ['text' =>  'Total Recovered Persons ' .  $this['recovered']['value']]
+            ['text' =>  'Total Recovered Persons ' .  $this['recovered']['value']],
+            ['attachment' => [
+                'type' => 'image',
+                'payload' => [
+                    'url' => $this['image']
+                ]
+            ]]
         ]];
     }
 }
