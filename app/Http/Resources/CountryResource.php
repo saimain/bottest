@@ -15,7 +15,8 @@ class CountryResource extends JsonResource
     public function toArray($request)
     {
         return ['messages' => [
-            ['text' => 'Date : ' .  $this['lastUpdate'] .  ' | Total Confirmed Cases ' . $this['confirmed']['value'] . ' | Total Deaths Cases ' . $this['deaths']['value'] . ' | Total Recovered Persons ' .  $this['recovered']['value']],
+
+            ['text' => $this['lastUpdate'] . ' နေ့တွင် ' . $this['confirmed']['value'] . ' ဦး ကူးစက်ခံရပြီး ၊ ' . $this['deaths']['value'] . ' ဦး သေဆုံးခဲ့ပါသည်။ ' . 'ကူးစက်ခံရသူ ' . $this['recovered']['value'] . ' ကျန်းမာရေးပြန်လည် ကောင်းမွန်လာပါသည်။'],
 
 
         ]];
