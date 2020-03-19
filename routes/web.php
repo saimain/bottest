@@ -11,3 +11,4 @@ Route::get('/', function () {
 
 Route::get('/overview', 'DataController@overview');
 Route::get('/todayoverview', 'DataController@todayoverview');
+Route::get('/country/{iso}', 'CountryData@getData');
